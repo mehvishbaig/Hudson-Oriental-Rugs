@@ -1,0 +1,44 @@
+/*
+  oriental rugs Forms Style Sheet
+
+   Filename: or_form
+
+
+
+
+/* Form Layout Styles */
+
+form#information {
+   background-color: rgba(206, 141, 56, 0.1);
+}
+
+fieldset {
+   border: none;
+}
+
+/* Input and Label Styles */
+
+label {
+   display: block;
+   float: left;
+   clear: left;
+   font-size: 0.9em;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   width: 180px;
+   text-align: right;
+}
+
+form#information input, form#information submit, form#information textarea {
+   display: block;
+   float: left;
+}
+
+
+ html {
+   background: url(photo1.jpeg) center center/cover fixed no-repeat;
+   font-family: Verdana, Geneva, sans-serif;
+   height: 100%;
+}
+
+

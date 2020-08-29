@@ -1,0 +1,90 @@
+ <!doctype html>
+<html>
+<head>
+ <meta charset="utf-8"/>
+  <title> Contact Us </title>
+  <link href="or_base.css" type="text/css" rel="stylesheet"/>
+  <link href="or_layout.css" rel="stylesheet"/>
+  <link href="contact_us.css" rel="stylesheet"/>
+ 
+ 
+	<!--Embedded style css-->
+ 
+		<style type="text/css">
+			html {background-image:url('photo5.jpg'); }
+		</style>
+		
+	<script>
+		// Created a custom object to hold the properties of the rug object
+		function rug(name, country) {
+			this.name = name;
+			this.country =  country;
+		}
+		
+	</script>
+</head>
+<body>
+
+<form id="information" >
+	  
+    <h2>Please select the rug size to get the price of rug wash:</h2>  
+     <section> 
+	   <label for="size"id = "rugCleaning">Enter rug size:</label>
+		 <fieldset>
+		 <p></p>
+          10 X 14<input type="radio" value="10X14" name="size" id = "tenByFourteen"onclick = "size()"/> <br/>
+		  9 X 12<input type="radio" value="9x12" name="size"  id = "9x12"/> <br/>
+		  8 X 10<input type="radio" value="8x10" name="size"  id = "8x10"/> <br/>
+		  6 X 9<input type="radio" value="6x9" name="size"  id = "6x9"/>   <br/>
+		
+		 <label for="submit"></label>
+		 <input type="submit" value="Submit Size" onclick = "return calculatePrice()" id = "submit"/><br/>
+		</fieldset>
+     </section>
+      
+</form>
+		
+	
+	<script type = "text/javascript">
+	// If statement for calculating the price of rug wash according to size
+	 function calculatePrice() {
+		if (document.getElementById("tenByFourteen").checked) {
+			alert("The price of a 10 x 14 rug wash is: $420.00 ");
+		} else if (document.getElementById("9x12").checked) {
+			alert("The price of a 9 x 12 rug wash is: $324.00 ");
+		}else if (document.getElementById("8x10").checked) {
+			alert("The price of a 8 x 10 rug wash is: $240.00 ");
+		} else if (document.getElementById("6x9").checked) {
+			alert("The price of a 6 x 9 rug wash is: $162.00 ");
+		}
+	}
+	
+	/* Add Event listener and handler for mouse over and out*/
+	submit.addEventListener("mouseover",changeColorOnMouseOver);
+	submit.addEventListener("mouseout",changeColorOnMouseOut);
+	
+	function changeColorOnMouseOver() {
+		this.style.background = "red";
+		this.style.color = "yellow";
+	}
+	function changeColorOnMouseOut() {
+		this.style.background = "white";
+		this.style.color = "blue";
+	}
+	// Instance of the custom object
+	var pakistan = new rug("Kazak", "Pakistan");
+	var persian = new rug("Tabriz", "Persia");	
+	window.document.write("* The country of origin is " + persian.country + " & the design is called " + persian.name + "<br/>" );
+	
+	
+	var rugsCreatedIn = new Array("  Persia","  Pakistan","  China","  Tibet","  India");
+	document.write("* The rugs are hand knotted in these countries:"+ "<br/>");
+	for (i = 0; i < rugsCreatedIn.length; i++) {
+	document.write("<b> - </b> " + rugsCreatedIn[i]+ "<br/>");
+	}
+	
+    
+	
+	</script>
+ </body>
+</html>
